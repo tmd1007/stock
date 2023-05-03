@@ -8,6 +8,8 @@ import org.jsoup.select.Elements;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import zerobase.stock.model.Company;
+import zerobase.stock.scraper.NaverFinanceScraper;
+import zerobase.stock.scraper.Scraper;
 import zerobase.stock.scraper.YahooFinanceScraper;
 
 import java.io.IOException;
@@ -16,11 +18,7 @@ import java.io.IOException;
 public class StockApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(StockApplication.class, args);
-
-		YahooFinanceScraper scraper = new YahooFinanceScraper();
-		var result = scraper.scrap(Company.builder().ticker("O").build());
-		System.out.println(result);
+		SpringApplication.run(StockApplication.class, args);
 
 	}
 
